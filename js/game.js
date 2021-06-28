@@ -116,18 +116,18 @@ function create() {
     nextArrow.setVisible(false);
     
     //----les membres-----
-    var head = this.add.image(260, 528, 'head', Phaser.Math.RND.pick(frames)).setInteractive();
+    var head = this.add.image(310, 70, 'head', Phaser.Math.RND.pick(frames)).setInteractive();
     this.input.setDraggable(head);
 //    head.setScale(2);
     head.setName('head');
 //    head.setScale(0.45);
     
-    var body = this.add.image(70, 550, 'body', Phaser.Math.RND.pick(frames)).setInteractive();
+    var body = this.add.image(300, 512, 'body', Phaser.Math.RND.pick(frames)).setInteractive();
     this.input.setDraggable(body);
     body.setName('body');
 //    body.setScale(0.45);
     
-    var hips = this.add.image(70, 412, 'hips', Phaser.Math.RND.pick(frames)).setInteractive();
+    var hips = this.add.image(70, 550, 'hips', Phaser.Math.RND.pick(frames)).setInteractive();
     this.input.setDraggable(hips);
     hips.setName('hips');
 //    hips.setScale(0.45);
@@ -137,36 +137,47 @@ function create() {
     legL.setName('legL');
 //    legL.setScale(0.45);
     
-    var legR = this.add.image(320, 400, 'legR', Phaser.Math.RND.pick(frames)).setInteractive();
+    var legR = this.add.image(50, 280, 'legR', Phaser.Math.RND.pick(frames)).setInteractive();
     this.input.setDraggable(legR);
     legR.setName('legR');
 //    legR.setScale(0.45);
     
     //-----les drop zones----
+    // margin left, margin top, width, heigth 
     //  A drop zone
-    var zone = this.add.zone(220, 102, 100, 140).setRectangleDropZone(100, 140);
+    var zone = this.add.zone(187, 158, 100, 90).setRectangleDropZone(100, 90);
     zone.setName('head');
     
     //  A drop zone
-    var zone2 = this.add.zone(238, 218, 90, 90).setRectangleDropZone(90, 90);
+    var zone2 = this.add.zone(200, 220, 240, 70).setRectangleDropZone(240, 70);
     zone2.setName('body');
     
     //  A drop zone
-    var zone3 = this.add.zone(147, 220, 90, 97).setRectangleDropZone(90, 97);
-    zone3.setName('handL');
+    var zone3 = this.add.zone(195, 340, 180, 85).setRectangleDropZone(180, 85);
+    zone3.setName('hips');
     
     
     //  A drop zone
-    var zone4 = this.add.zone(252, 405, 40, 110).setRectangleDropZone(40, 110);
+    var zone4 = this.add.zone(232, 395, 70, 30).setRectangleDropZone(70, 30);
     zone4.setName('legR');
     
     //  A drop zone
-    var zone5 = this.add.zone(194, 400, 40, 108).setRectangleDropZone(40, 108);
+    var zone5 = this.add.zone(127, 396, 60, 25).setRectangleDropZone(60, 25);
     zone5.setName('legL');
     
-     //  A drop zone
-    var zone6 = this.add.zone(234, 306, 90, 80).setRectangleDropZone(90, 80);
-    zone6.setName('hips');
+//      var graphics = this.add.graphics();
+//    graphics.lineStyle(2, 0xffff00);
+//    graphics.strokeRect(zone.x - zone.input.hitArea.width / 2, zone.y - zone.input.hitArea.height / 2, zone.input.hitArea.width, zone.input.hitArea.height);
+//    
+//    graphics.strokeRect(zone2.x - zone2.input.hitArea.width / 2, zone2.y - zone2.input.hitArea.height / 2, zone2.input.hitArea.width, zone2.input.hitArea.height);
+//    
+//    graphics.strokeRect(zone3.x - zone3.input.hitArea.width / 2, zone3.y - zone3.input.hitArea.height / 2, zone3.input.hitArea.width, zone3.input.hitArea.height);
+//    
+//    graphics.strokeRect(zone4.x - zone4.input.hitArea.width / 2, zone4.y - zone4.input.hitArea.height / 2, zone4.input.hitArea.width, zone4.input.hitArea.height);
+//    
+//    graphics.strokeRect(zone5.x - zone5.input.hitArea.width / 2, zone5.y - zone5.input.hitArea.height / 2, zone5.input.hitArea.width, zone5.input.hitArea.height);
+    
+ 
     
  
     //---drag and drop mechanics---
