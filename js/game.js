@@ -74,7 +74,7 @@ function preload() {
     this.load.image('star', './assets/yellow-star.png');
     
     //---background pattern---
-    this.load.image('gameBg', './assets/feuilledroite-01-01.png');
+    this.load.image('gameBg', './assets/leaf--pattern-01.png');
 
 }
 
